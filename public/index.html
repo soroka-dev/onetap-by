@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#0a0b0a">
+  <meta name="description" content="OneTap.by производит NFC-стикеры для отзывов, перехода на сайт, подключения к Wi-Fi и любых других задач.">
+  <title>OneTap.by — NFC-стикеры для любых целей</title>
+  <link rel="preload" href="/assets/hero.jpg" as="image">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="header" data-header>
+    <a class="logo" href="#top" aria-label="OneTap.by — на главную">onetap<span>.by</span></a>
+    <nav class="nav" id="site-nav" aria-label="Основная навигация" data-nav>
+      <a href="#solutions">Решения</a>
+      <a href="#how">Как это работает</a>
+      <a class="nav-cta" href="#order">Оставить заявку</a>
+    </nav>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu>
+      <span></span><span></span><span></span><span class="sr-only">Открыть меню</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <img class="hero-image" src="/assets/hero.jpg" alt="Смартфон касается чёрного NFC-стикера OneTap.by" width="1536" height="1024">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Производство NFC-стикеров</p>
+        <h1>NFC-стикеры<br>для любых целей</h1>
+        <p class="hero-copy">Отзывы на Яндекс Картах, ваш сайт и Wi-Fi — в одно касание</p>
+        <a class="button button-primary" href="#order">Обсудить заказ <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="tap-note" aria-hidden="true"><span class="tap-rings"></span><b>1 касание</b><small>без приложений</small></div>
+    </section>
+
+    <section class="solutions section" id="solutions">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span> Что можно сделать</p><h2>Один стикер.<br>Много сценариев</h2></div>
+        <p>Программируем NFC-метку под вашу задачу. Клиенту достаточно поднести телефон — нужное действие откроется автоматически.</p>
+      </div>
+      <div class="solutions-list">
+        <article class="solution-card">
+          <span class="solution-number">01</span>
+          <div class="solution-icon" aria-hidden="true">★</div>
+          <div><h3>Для отзывов</h3><p>Ведут клиента прямо на страницу отзыва в Яндекс Картах</p></div>
+        </article>
+        <article class="solution-card">
+          <span class="solution-number">02</span>
+          <div class="solution-icon" aria-hidden="true">↗</div>
+          <div><h3>Для сайта</h3><p>Открывают меню, каталог, акции, контакты или любую ссылку</p></div>
+        </article>
+        <article class="solution-card">
+          <span class="solution-number">03</span>
+          <div class="solution-icon wifi-icon" aria-hidden="true">⌁</div>
+          <div><h3>Для Wi-Fi</h3><p>Подключают гостей отеля, ресторана или офиса без ввода пароля</p></div>
+        </article>
+        <article class="solution-card">
+          <span class="solution-number">04</span>
+          <div class="solution-icon" aria-hidden="true">＋</div>
+          <div><h3>Для другой задачи</h3><p>Настроим стикер под ваш сценарий и нужное действие</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="how section" id="how">
+      <div class="how-copy">
+        <p class="eyebrow"><span></span> Как это работает</p>
+        <h2>Просто поднесите телефон</h2>
+        <p>Внутри каждого стикера — NFC-метка с заданным действием. Камера, QR-код и отдельное приложение не нужны.</p>
+      </div>
+      <ol class="steps">
+        <li><span>01</span><div><b>Вы рассказываете задачу</b><small>Выбираем назначение, форму и количество</small></div></li>
+        <li><span>02</span><div><b>Мы настраиваем стикеры</b><small>Программируем метки под нужное действие</small></div></li>
+        <li><span>03</span><div><b>Клиент делает одно касание</b><small>Ссылка или Wi-Fi открываются моментально</small></div></li>
+      </ol>
+    </section>
+
+    <section class="order section" id="order">
+      <div class="order-copy">
+        <p class="eyebrow"><span></span> Рассчитать заказ</p>
+        <h2>Расскажите, какие стикеры вам нужны</h2>
+        <p>Укажите примерное количество. Мы свяжемся и уточним детали.</p>
+      </div>
+      <form class="lead-form" data-form novalidate>
+        <div class="form-grid">
+          <label>Telegram <span>*</span><input name="telegram" autocomplete="username" placeholder="@username" required minlength="5"></label>
+          <label>Телефон <span>*</span><input name="phone" type="tel" autocomplete="tel" placeholder="+375 29 000-00-00" required minlength="7"></label>
+          <label>Назначение <span>*</span>
+            <select name="service" required>
+              <option value="" selected disabled>Выберите из списка</option>
+              <option value="reviews">Наклейки для отзывов</option>
+              <option value="website">Наклейки для перехода на сайт</option>
+              <option value="wifi">Наклейки для Wi-Fi</option>
+              <option value="other">Другое</option>
+            </select>
+          </label>
+          <label>Примерное количество <span>*</span><input name="quantity" placeholder="Например, 100" required maxlength="32"></label>
+        </div>
+        <label class="comment-field">Комментарий <span class="optional">необязательно</span><textarea name="comment" rows="3" maxlength="500" placeholder="Форма, цвет или другие детали"></textarea></label>
+        <label class="honeypot" aria-hidden="true">Компания<input name="company" tabindex="-1" autocomplete="off"></label>
+        <button class="button button-primary submit-button" type="submit">Отправить заявку <span aria-hidden="true">↗</span></button>
+        <p class="form-status" role="status" aria-live="polite" data-status></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#top">onetap<span>.by</span></a>
+    <p>NFC-стикеры для любых целей</p>
+    <a href="#order">Оставить заявку</a>
+  </footer>
+</body>
+</html>
