@@ -5,15 +5,17 @@ const formStatus = document.querySelector("[data-status]");
 
 menuButton?.addEventListener("click", () => {
   const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-  menuButton.setAttribute("aria-expanded", String(!isOpen));
-  navigation.classList.toggle("open", !isOpen);
+  setMenuState(!isOpen);
 });
 
 navigation?.addEventListener("click", (event) => {
   if (event.target.closest("a")) {
-    menuButton?.setAttribute("aria-expanded", "false");
-    navigation.classList.remove("open");
+    setMenuState(false);
   }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMenuState(false);
 });
 
 leadForm?.addEventListener("submit", async (event) => {
@@ -22,11 +24,12 @@ leadForm?.addEventListener("submit", async (event) => {
   if (!leadForm.reportValidity()) return;
 
   const submitButton = leadForm.querySelector("button[type='submit']");
+  const submitLabel = submitButton.querySelector("[data-submit-label]");
   const formData = new FormData(leadForm);
   const payload = Object.fromEntries(formData.entries());
 
   submitButton.disabled = true;
-  submitButton.firstChild.textContent = "Отправляем… ";
+  submitLabel.textContent = "Отправляем…";
   showStatus("", "");
 
   try {
@@ -45,11 +48,18 @@ leadForm?.addEventListener("submit", async (event) => {
     showStatus(error.message || "Не удалось отправить заявку. Попробуйте ещё раз", "error");
   } finally {
     submitButton.disabled = false;
-    submitButton.firstChild.textContent = "Отправить заявку ";
+    submitLabel.textContent = "Отправить заявку";
   }
 });
 
 function showStatus(message, type) {
   formStatus.textContent = message;
   formStatus.className = `form-status ${type}`.trim();
+}
+
+function setMenuState(isOpen) {
+  const menuLabel = menuButton?.querySelector(".sr-only");
+  menuButton?.setAttribute("aria-expanded", String(isOpen));
+  navigation?.classList.toggle("open", isOpen);
+  if (menuLabel) menuLabel.textContent = isOpen ? "Закрыть меню" : "Открыть меню";
 }

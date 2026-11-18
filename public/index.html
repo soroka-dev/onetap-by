@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="theme-color" content="#0a0b0a">
-  <meta name="description" content="OneTap.by производит NFC-стикеры для отзывов, перехода на сайт, подключения к Wi-Fi и любых других задач.">
+  <meta name="description" content="OneTap.by производит NFC-стикеры для отзывов, меню, перехода на сайт, подключения к Wi-Fi и любых других задач.">
   <title>OneTap.by — NFC-стикеры для любых целей</title>
   <link rel="preload" href="./assets/hero.jpg" as="image">
   <link rel="stylesheet" href="./styles.css">
@@ -31,10 +31,12 @@
       <div class="hero-content">
         <p class="eyebrow"><span></span> Производство NFC-стикеров</p>
         <h1>NFC-стикеры<br>для любых целей</h1>
-        <p class="hero-copy">Отзывы на Яндекс Картах, ваш сайт и Wi-Fi — в одно касание</p>
-        <a class="button button-primary" href="#order">Обсудить заказ <span aria-hidden="true">↗</span></a>
+        <p class="hero-copy">Отзывы, меню, сайт и Wi-Fi — одно касание вместо лишних действий</p>
+        <a class="button button-primary" href="#order">
+          Обсудить заказ
+          <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
-      <div class="tap-note" aria-hidden="true"><span class="tap-rings"></span><b>1 касание</b><small>без приложений</small></div>
     </section>
 
     <section class="solutions section" id="solutions">
@@ -44,24 +46,34 @@
       </div>
       <div class="solutions-list">
         <article class="solution-card">
-          <span class="solution-number">01</span>
-          <div class="solution-icon" aria-hidden="true">★</div>
-          <div><h3>Для отзывов</h3><p>Ведут клиента прямо на страницу отзыва в Яндекс Картах</p></div>
+          <div class="solution-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          </div>
+          <div class="solution-copy"><h3>Для отзывов</h3><p>Ведут клиента прямо на страницу отзыва в Яндекс Картах</p></div>
         </article>
         <article class="solution-card">
-          <span class="solution-number">02</span>
-          <div class="solution-icon" aria-hidden="true">↗</div>
-          <div><h3>Для сайта</h3><p>Открывают меню, каталог, акции, контакты или любую ссылку</p></div>
+          <div class="solution-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h8M8 13h5M16 16l4-4M16 12h4v4"/></svg>
+          </div>
+          <div class="solution-copy"><h3>Для сайта</h3><p>Открывают каталог, акции, контакты или любую нужную страницу</p></div>
         </article>
         <article class="solution-card">
-          <span class="solution-number">03</span>
-          <div class="solution-icon wifi-icon" aria-hidden="true">⌁</div>
-          <div><h3>Для Wi-Fi</h3><p>Подключают гостей отеля, ресторана или офиса без ввода пароля</p></div>
+          <div class="solution-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4.9 9.3a11 11 0 0 1 14.2 0M7.8 12.4a6.8 6.8 0 0 1 8.4 0M10.7 15.5a2.7 2.7 0 0 1 2.6 0"/><circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <div class="solution-copy"><h3>Для Wi-Fi</h3><p>Подключают гостей отеля, ресторана или офиса без ввода пароля</p></div>
         </article>
         <article class="solution-card">
-          <span class="solution-number">04</span>
-          <div class="solution-icon" aria-hidden="true">＋</div>
-          <div><h3>Для другой задачи</h3><p>Настроим стикер под ваш сценарий и нужное действие</p></div>
+          <div class="solution-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5.5c2.8-.7 5.5-.2 8 1.5v13c-2.5-1.7-5.2-2.2-8-1.5v-13ZM20 5.5c-2.8-.7-5.5-.2-8 1.5v13c2.5-1.7 5.2-2.2 8-1.5v-13Z"/></svg>
+          </div>
+          <div class="solution-copy"><h3>Для меню</h3><p>Открывают актуальное меню ресторана или бара сразу на телефоне гостя</p></div>
+        </article>
+        <article class="solution-card">
+          <div class="solution-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          </div>
+          <div class="solution-copy"><h3>Для другой задачи</h3><p>Настроим стикер под ваш сценарий и нужное действие</p></div>
         </article>
       </div>
     </section>
@@ -95,6 +107,7 @@
               <option value="reviews">Наклейки для отзывов</option>
               <option value="website">Наклейки для перехода на сайт</option>
               <option value="wifi">Наклейки для Wi-Fi</option>
+              <option value="menu">Наклейки для меню</option>
               <option value="other">Другое</option>
             </select>
           </label>
@@ -102,7 +115,10 @@
         </div>
         <label class="comment-field">Комментарий <span class="optional">необязательно</span><textarea name="comment" rows="3" maxlength="500" placeholder="Форма, цвет или другие детали"></textarea></label>
         <label class="honeypot" aria-hidden="true">Компания<input name="company" tabindex="-1" autocomplete="off"></label>
-        <button class="button button-primary submit-button" type="submit">Отправить заявку <span aria-hidden="true">↗</span></button>
+        <button class="button button-primary submit-button" type="submit">
+          <span data-submit-label>Отправить заявку</span>
+          <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
         <p class="form-status" role="status" aria-live="polite" data-status></p>
       </form>
     </section>
@@ -110,7 +126,6 @@
 
   <footer class="footer">
     <a class="logo" href="#top">onetap<span>.by</span></a>
-    <p>NFC-стикеры для любых целей</p>
     <a href="#order">Оставить заявку</a>
   </footer>
 </body>
