@@ -13,7 +13,8 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname !== "/api/lead") {
-      return env.ASSETS.fetch(request);
+      if (env.ASSETS?.fetch) return env.ASSETS.fetch(request);
+      return json({ ok: false, error: "Страница не найдена" }, 404, request, env);
     }
 
     if (request.method === "OPTIONS") {
@@ -116,7 +117,7 @@ function invalid(error) {
 
 function corsHeaders(request, env) {
   const origin = request.headers.get("origin") || "";
-  const allowedOrigin = env.ALLOWED_ORIGIN || new URL(request.url).origin;
+  const allowedOrigin = env.ALLOWED_ORIGIN || "https://soroka-dev.github.io";
   return {
     "access-control-allow-origin": origin === allowedOrigin ? origin : allowedOrigin,
     "access-control-allow-methods": "POST, OPTIONS",
