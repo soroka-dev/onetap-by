@@ -13,6 +13,16 @@ test("accepts a complete lead", () => {
   assert.equal(result.ok, true);
 });
 
+test("accepts stickers for a menu", () => {
+  const result = validateLead({
+    telegram: "@onetap_client",
+    phone: "+375 29 123-45-67",
+    service: "menu",
+    quantity: "50",
+  });
+  assert.equal(result.ok, true);
+});
+
 test("requires Telegram, phone, service and quantity", () => {
   assert.equal(validateLead({}).ok, false);
   assert.equal(validateLead({ telegram: "@valid_user" }).ok, false);
