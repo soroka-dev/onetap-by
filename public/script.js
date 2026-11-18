@@ -2,6 +2,7 @@ const menuButton = document.querySelector("[data-menu]");
 const navigation = document.querySelector("[data-nav]");
 const leadForm = document.querySelector("[data-form]");
 const formStatus = document.querySelector("[data-status]");
+const leadEndpoint = document.querySelector("meta[name='lead-endpoint']")?.content || "/api/lead";
 
 menuButton?.addEventListener("click", () => {
   const isOpen = menuButton.getAttribute("aria-expanded") === "true";
@@ -33,7 +34,7 @@ leadForm?.addEventListener("submit", async (event) => {
   showStatus("", "");
 
   try {
-    const response = await fetch("/api/lead", {
+    const response = await fetch(leadEndpoint, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(payload),
