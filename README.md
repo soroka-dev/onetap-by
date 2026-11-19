@@ -1,6 +1,6 @@
 # OneTap.by
 
-Сайт: https://soroka-dev.github.io/onetap-by/
+Сайт: https://onetap.by/
 
 Одностраничный сайт компании по производству NFC-стикеров. GitHub Pages публикует статическую версию сайта, а сайт вместе с API заявок разворачивается одним Cloudflare Worker.
 
@@ -23,7 +23,7 @@ npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```
 
-При использовании собственного домена можно также добавить `ALLOWED_ORIGIN`.
+Для заявок с собственного домена задайте `ALLOWED_ORIGIN` равным `https://onetap.by` в настройках Cloudflare Worker.
 
 ## Запуск
 

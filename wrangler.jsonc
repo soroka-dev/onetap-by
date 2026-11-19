@@ -3,6 +3,9 @@
   "name": "onetap-by",
   "main": "worker.js",
   "compatibility_date": "2026-11-17",
+  "vars": {
+    "ALLOWED_ORIGIN": "https://onetap.by"
+  },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
