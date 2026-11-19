@@ -20,7 +20,7 @@
   <meta name="lead-endpoint" content="https://onetap-leads-bot.soroka-development.workers.dev/api/lead">
   <title>OneTap.by — NFC-стикеры для вашего бизнеса</title>
   <link rel="preload" href="./assets/hero.jpg" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="./styles.css?v=20261120-footer">
+  <link rel="stylesheet" href="./styles.css?v=20261120-labels">
   <script src="./script.js?v=20261119-responsive-header" defer></script>
 </head>
 <body>
@@ -157,9 +157,9 @@
       </div>
       <form class="lead-form" data-form novalidate>
         <div class="form-grid">
-          <label>Telegram <span>*</span><input name="telegram" autocomplete="username" placeholder="@username" required minlength="5"></label>
-          <label>Телефон <span>*</span><input name="phone" type="tel" autocomplete="tel" placeholder="+375 29 000-00-00" required minlength="7"></label>
-          <label>Назначение <span>*</span>
+          <label><span class="field-label">Telegram <span class="required">*</span></span><input name="telegram" autocomplete="username" placeholder="@username" required minlength="5"></label>
+          <label><span class="field-label">Телефон <span class="required">*</span></span><input name="phone" type="tel" autocomplete="tel" placeholder="+375 29 000-00-00" required minlength="7"></label>
+          <label><span class="field-label">Назначение <span class="required">*</span></span>
             <select name="service" required>
               <option value="" selected disabled>Выберите из списка</option>
               <option value="reviews">Наклейки для отзывов</option>
@@ -169,9 +169,9 @@
               <option value="other">Другое</option>
             </select>
           </label>
-          <label>Примерное количество <span>*</span><input name="quantity" placeholder="Например, 100" required maxlength="32"></label>
+          <label><span class="field-label">Примерное количество <span class="required">*</span></span><input name="quantity" placeholder="Например, 100" required maxlength="32"></label>
         </div>
-        <label class="comment-field">Комментарий <span class="optional">необязательно</span><textarea name="comment" rows="3" maxlength="500" placeholder="Форма, цвет или другие детали"></textarea></label>
+        <label class="comment-field"><span class="field-label">Комментарий <span class="optional">необязательно</span></span><textarea name="comment" rows="3" maxlength="500" placeholder="Форма, цвет или другие детали"></textarea></label>
         <label class="honeypot" aria-hidden="true">Компания<input name="company" tabindex="-1" autocomplete="off"></label>
         <button class="button button-primary submit-button" type="submit">
           <span data-submit-label>Отправить заявку</span>

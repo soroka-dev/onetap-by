@@ -103,7 +103,8 @@ h2 { max-width: 850px; margin-bottom: 0; font-size: clamp(44px, 5vw, 74px); line
 .lead-form { align-self: center; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 18px; }
 label { display: grid; gap: 8px; font-size: 14px; font-weight: 600; }
-label > span { color: var(--accent); }
+label > .field-label { display: inline-flex; align-items: baseline; gap: 5px; color: var(--text); }
+label .required { color: var(--accent); }
 label .optional { color: var(--muted); font-weight: 400; }
 input, select, textarea { width: 100%; color: var(--text); background: #0d100d; border: 1px solid #363c34; border-radius: 10px; padding: 13px 14px; transition: border-color .18s ease, background-color .18s ease; }
 input:hover, select:hover, textarea:hover { border-color: #50584d; }
