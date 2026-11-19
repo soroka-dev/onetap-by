@@ -3,7 +3,6 @@ const leadForm = document.querySelector("[data-form]");
 const formStatus = document.querySelector("[data-status]");
 const leadEndpoint = document.querySelector("meta[name='lead-endpoint']")?.content || "/api/lead";
 
-const mobileHeader = window.matchMedia("(max-width: 900px)");
 let lastScrollY = window.scrollY;
 let scrollFrame = 0;
 
@@ -12,7 +11,7 @@ function updateHeader() {
   const scrollY = Math.max(0, window.scrollY);
   const movement = scrollY - lastScrollY;
 
-  if (!mobileHeader.matches || scrollY < 100) {
+  if (scrollY < 100) {
     header?.classList.remove("is-hidden");
   } else if (movement > 8) {
     header?.classList.add("is-hidden");
