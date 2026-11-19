@@ -1,23 +1,33 @@
-const menuButton = document.querySelector("[data-menu]");
-const navigation = document.querySelector("[data-nav]");
+const header = document.querySelector("[data-header]");
 const leadForm = document.querySelector("[data-form]");
 const formStatus = document.querySelector("[data-status]");
 const leadEndpoint = document.querySelector("meta[name='lead-endpoint']")?.content || "/api/lead";
 
-menuButton?.addEventListener("click", () => {
-  const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-  setMenuState(!isOpen);
-});
+const mobileHeader = window.matchMedia("(max-width: 900px)");
+let lastScrollY = window.scrollY;
+let scrollFrame = 0;
 
-navigation?.addEventListener("click", (event) => {
-  if (event.target.closest("a")) {
-    setMenuState(false);
+function updateHeader() {
+  scrollFrame = 0;
+  const scrollY = Math.max(0, window.scrollY);
+  const movement = scrollY - lastScrollY;
+
+  if (!mobileHeader.matches || scrollY < 100) {
+    header?.classList.remove("is-hidden");
+  } else if (movement > 8) {
+    header?.classList.add("is-hidden");
+  } else if (movement < -8) {
+    header?.classList.remove("is-hidden");
   }
-});
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") setMenuState(false);
-});
+  if (Math.abs(movement) > 8 || scrollY < 100) lastScrollY = scrollY;
+}
+
+window.addEventListener("scroll", () => {
+  if (!scrollFrame) scrollFrame = window.requestAnimationFrame(updateHeader);
+}, { passive: true });
+window.addEventListener("resize", updateHeader);
+header?.addEventListener("focusin", () => header.classList.remove("is-hidden"));
 
 leadForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -56,11 +66,4 @@ leadForm?.addEventListener("submit", async (event) => {
 function showStatus(message, type) {
   formStatus.textContent = message;
   formStatus.className = `form-status ${type}`.trim();
-}
-
-function setMenuState(isOpen) {
-  const menuLabel = menuButton?.querySelector(".sr-only");
-  menuButton?.setAttribute("aria-expanded", String(isOpen));
-  navigation?.classList.toggle("open", isOpen);
-  if (menuLabel) menuLabel.textContent = isOpen ? "Закрыть меню" : "Открыть меню";
 }
