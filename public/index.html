@@ -18,7 +18,7 @@
   <meta name="lead-endpoint" content="https://onetap-leads-bot.soroka-development.workers.dev/api/lead">
   <title>OneTap.by — NFC-стикеры для вашего бизнеса</title>
   <link rel="preload" href="./assets/hero.jpg" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="./styles.css?v=20261119-b2b">
+  <link rel="stylesheet" href="./styles.css?v=20261119-compare">
   <script src="./script.js" defer></script>
 </head>
 <body>
@@ -90,11 +90,40 @@
     </section>
 
     <section class="why-nfc section" aria-labelledby="why-nfc-title">
-      <div>
-        <p class="eyebrow"><span></span> NFC или QR-код</p>
-        <h2 id="why-nfc-title">Почему NFC-стикеры удобнее QR-кодов</h2>
+      <p class="eyebrow"><span></span> NFC или QR-код</p>
+      <h2 id="why-nfc-title">Почему NFC-стикеры удобнее QR-кодов</h2>
+      <div class="comparison-grid">
+        <article class="comparison-card comparison-card-qr">
+          <div class="comparison-header">
+            <div class="comparison-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h3v3h-3zM19 14h2v2h-2zM19 19h2v2h-2zM14 19h2v2h-2z"/></svg>
+            </div>
+            <span class="comparison-count">3 действия</span>
+          </div>
+          <h3>QR-код</h3>
+          <ol class="comparison-steps">
+            <li><span>01</span><span>Открыть камеру</span></li>
+            <li><span>02</span><span>Навести на код</span></li>
+            <li><span>03</span><span>Перейти по ссылке</span></li>
+          </ol>
+          <p class="comparison-foot">Код должен оставаться видимым для камеры.</p>
+        </article>
+        <article class="comparison-card comparison-card-nfc">
+          <div class="comparison-header">
+            <div class="comparison-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 8c2.5 2.5 2.5 5.5 0 8M8 5c4.5 4 4.5 10 0 14M12 3c6 5 6 13 0 18"/></svg>
+            </div>
+            <span class="comparison-count">2 действия</span>
+          </div>
+          <h3>OneTap NFC</h3>
+          <ol class="comparison-steps">
+            <li><span>01</span><span>Поднести телефон</span></li>
+            <li><span>02</span><span>Открыть предложенную страницу</span></li>
+          </ol>
+          <p class="comparison-foot">Без камеры и обязательного квадратного кода на стикере.</p>
+        </article>
       </div>
-      <p class="why-nfc-copy">Для QR-кода гость открывает камеру и наводит её на изображение. NFC-стикер считывается при приближении совместимого телефона без камеры и ведёт к отзыву, меню или сайту. Меньше действий для клиента, а для бизнеса — аккуратный носитель, который можно оформить в фирменном стиле.</p>
+      <p class="comparison-summary">На телефоне с NFC путь к отзыву, меню или сайту короче. А стикер можно оформить в стиле вашего бизнеса.</p>
     </section>
 
     <section class="how section" id="how">
