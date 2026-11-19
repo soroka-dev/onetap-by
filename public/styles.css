@@ -80,7 +80,15 @@ h2 { max-width: 850px; margin-bottom: 0; font-size: clamp(44px, 5vw, 74px); line
 .comparison-steps li span:first-child { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
 .comparison-card-nfc .comparison-steps li span:first-child { color: var(--accent); }
 .comparison-foot { margin: auto 0 0; padding-top: 22px; color: var(--muted); font-size: 15px; }
-.comparison-summary { margin: 24px 0 0; color: var(--muted); font-size: 17px; }
+.nfc-benefits-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-top: 72px; }
+.nfc-benefits-heading .eyebrow { margin: 0; }
+.nfc-benefits-heading h3 { margin: 0; font-size: clamp(28px, 3vw, 42px); line-height: 1.05; letter-spacing: -.04em; font-weight: 600; }
+.nfc-benefits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; list-style: none; padding: 0; margin: 28px 0 0; }
+.nfc-benefits li { padding-top: 18px; border-top: 1px solid var(--line); }
+.nfc-benefits li > span { display: block; margin-bottom: 18px; color: var(--accent); font-size: 13px; font-variant-numeric: tabular-nums; }
+.nfc-benefits strong { display: block; font-size: 20px; line-height: 1.2; font-weight: 600; letter-spacing: -.02em; }
+.nfc-benefits p { margin: 10px 0 0; color: var(--muted); font-size: 15px; line-height: 1.45; }
+.comparison-summary { margin: 28px 0 0; color: var(--muted); font-size: 14px; }
 
 .how { display: grid; grid-template-columns: .9fr 1.1fr; gap: 104px; border-top: 1px solid var(--line); }
 .how-copy h2 { margin: 28px 0; }
@@ -129,6 +137,9 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
   .section-heading, .how, .order { grid-template-columns: 1fr; }
   .section-heading { align-items: start; gap: 28px; }
   .comparison-grid { grid-template-columns: 1fr; }
+  .nfc-benefits-heading { display: block; }
+  .nfc-benefits-heading h3 { margin-top: 16px; }
+  .nfc-benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .how { gap: 52px; }
   .order { gap: 48px; padding: 48px; }
 }
@@ -149,7 +160,10 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
   .comparison-card h3 { margin: 22px 0 16px; }
   .comparison-steps li { font-size: 17px; }
   .comparison-foot { padding-top: 18px; }
-  .comparison-summary { font-size: 16px; }
+  .nfc-benefits-heading { margin-top: 56px; }
+  .nfc-benefits { grid-template-columns: 1fr; gap: 24px; }
+  .nfc-benefits li > span { margin-bottom: 10px; }
+  .comparison-summary { font-size: 14px; }
   .solution-card { grid-template-columns: 44px 1fr; gap: 16px; min-height: 132px; padding-right: 0; }
   .solution-icon { width: 44px; height: 44px; border-radius: 12px; }
   .solution-icon svg { width: 21px; height: 21px; }
